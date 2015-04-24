@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div ng-repeat="order in qOrders.orders">
+        <div class="panel-body" ng-show="order.status.isBuilt">
+            <a id="toggler" href="#" data-toggle="collapse" class="active" data-target="#order-fields">
+                <i class="fa fa-chevron-circle-right"></i>
+                <i class="fa fa-chevron-circle-down"></i>
+                {{order.customer.name.first}} {{order.customer.name.last}}
+            </a>
+            <div id="order-fields" class="collapse in">
+                <ul class="order-list">
+                    <li>Date Ordered: {{order.date | date: 'MMM dd, yyyy'}}</li>
+                    <li>Vehicle Ordered:{{order.vehicle.make}} {{order.vehicle.model}}</li>
+                    <li>Date Complete: {{order.status.dateBuilt| date: 'MMM dd, yyyy'}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

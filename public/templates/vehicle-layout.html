@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-title">{{car.make}} {{car.model}}</div>
+    <div class="panel-body">
+        <h4>
+            <img ng-src="/assets/{{car.img}}" class="img-responsive center-block"/>
+            <p>Order ID: {{car.id}}</p>
+            <p>Make: {{car.make}}</p>
+            <p>Model: {{car.model}}</p>
+            <p>Price: {{car.price|currency}}</p>
+            <p>Description:</p>
+            <p>{{car.description}}</p>
+        </h4>
+    </div>
+</div>
